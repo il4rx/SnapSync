@@ -18,6 +18,7 @@ Check out SnapSync, a Python forum project. You can easily  download and set up 
 2. **Install Requirements:**
    - Open your terminal and navigate to the SnapSync project directory.
    - Run the following command to install the required dependencies:
+
      ```bash
      pip install -r requirements.txt
      ```
@@ -35,6 +36,7 @@ Check out SnapSync, a Python forum project. You can easily  download and set up 
 
 5. **Run SnapSync:**
    - Once the database is imported and your account is created, run the Python script to start the forum in your terminal:
+   
      ```bash
      python main.py
      ```
