@@ -9,6 +9,7 @@ import bcrypt
 import random
 import subprocess
 import sys
+import json
 
 date = datetime.datetime.now()
 _strf = date.strftime("%x")
@@ -16,9 +17,6 @@ _connector = mysql.connector.connect(
     host="localhost", user="root", password="", database="snap_snyc"
 )
 _cursor = _connector.cursor()
-
-
-loginInfo = []
 class Fallback :
     def __init__(self) -> None :
         print("Fallback In Process....")
@@ -26,6 +24,7 @@ class Fallback :
         os.system("cls||clear")
         subprocess.Popen(["python", "enterance.py"])
         sys.exit(0)
+        
 class MainBody :
     def __init__(self) :
         print(f"""@ Hello, Welcome To SnapSync Forums,
@@ -60,9 +59,43 @@ login using --login!
                     subprocess.Popen(["python", "enterance.py"])
                     sys.exit(0)
                 else :
-                    print("founded")
-                    time.sleep(1)
+                    userPasswordInput = str(input("Password : >>> "))
+                    
+                    for result in _result:
+                        hashed_password = str(result[2])
+                        userId = str(result[0])
+                        username = str(result[1])
+                        
+                        if bcrypt.checkpw(userPasswordInput.encode('utf-8'), hashed_password.encode('utf-8')):
+                            
+                            
+                            with open('./Auth/Auth.json', "r+") as OAuth2 :
+                                _AuthData = json.load(OAuth2)
+                                _AuthData['userID'] = userId
+                                _AuthData["username"] = username
+                            
+                                OAuth2.seek(0)
+                                json.dump(_AuthData, OAuth2)
+                                OAuth2.truncate()
+                                
+                            print('Succeed!')
+                            time.sleep(1)
+                            
+                        else:
+                            print("Password Wrong!")
+                            time.sleep(1)
+                            os.system("cls||clear")  # Improved cross-platform clear
+                            subprocess.Popen(["python", "enterance.py"])
+                            sys.exit(0)
                     
             except ValueError :
                 print("Error, Value is Missing!")
-MainBody()
+                
+                
+with open('./Auth/Auth.json', "r") as JsonFile :
+    AuthData = json.load(JsonFile)
+    if len(AuthData) < 1 or len(AuthData) == 0 :
+        MainBody()
+    else :
+        print('You already logged!')
+        time.sleep(1)

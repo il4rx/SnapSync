@@ -82,6 +82,8 @@ class Main:
                 Main.start_program()
             else:
                 print("Invalid command")
+                time.sleep(1)
+                os.system("cls||clear")
 
 def main():
     Figlet.header()
