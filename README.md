@@ -9,8 +9,6 @@ Check out SnapSync, a Python forum project. You can easily  download and set up 
 ![Static Badge](https://img.shields.io/badge/PIP-23.1.2-ffffff?style=for-the-badge&logo=pypi&logoColor=fff&color=%23444)
 <br>
 # Installation
-# SnapSync Forum Setup Guide
-
 1. **Download the Code:**
    - Visit the [SnapSync GitHub repository](https://github.com/il4rx/SnapSync.git).
    - Click on the "Code" button and select "Download ZIP."
@@ -36,7 +34,7 @@ Check out SnapSync, a Python forum project. You can easily  download and set up 
 
 5. **Run SnapSync:**
    - Once the database is imported and your account is created, run the Python script to start the forum in your terminal:
-   
+
      ```bash
      python main.py
      ```
