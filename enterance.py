@@ -59,8 +59,8 @@ class Main:
         try:
             print("Starting Program....")
             time.sleep(1)
+            os.system("cls||clear")
             subprocess.Popen(["python", "main.py"])
-            os.startfile("main.py")
             sys.exit(0)
         except KeyboardInterrupt:
             print("Error!")
