@@ -139,6 +139,8 @@ class Authenticated:
 
             if command_prompt == "--fallback":
                 Fallback()
+            elif command_prompt == "--refresh" :
+                Lexer()
             elif command_prompt == "--logout" :
                 print('Try to logout...')
                 time.sleep(1)
