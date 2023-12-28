@@ -12,7 +12,8 @@ import sys
 import json
 
 date = datetime.datetime.now()
-_strf = date.strftime("%x")
+_strf = date.strftime('%Y-%m-%d %H:%M:%S')
+
 _connector = mysql.connector.connect(
     host="localhost", user="root", password="", database="snap_snyc"
 )
@@ -91,11 +92,20 @@ login using --login!
             except ValueError :
                 print("Error, Value is Missing!")
                 
-                
+
+class Authenticated :
+    def __init__(self) :
+        with open('./Auth/Auth.json', "r") as JsonsFile :
+            AuthData = json.load(JsonsFile)
+            print(f"@ Welcome {AuthData['username']} \n")
+    
+    
+        
 with open('./Auth/Auth.json', "r") as JsonFile :
     AuthData = json.load(JsonFile)
     if len(AuthData) < 1 or len(AuthData) == 0 :
         MainBody()
     else :
-        print('You already logged!')
+        os.system("cls||clear")
+        Authenticated()
         time.sleep(1)
