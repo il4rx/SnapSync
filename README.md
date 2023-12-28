@@ -1,4 +1,4 @@
-<img src="https://i.ibb.co/vH2sWww/SnapSync.jpg" alt="none" style="width : 100%">
+<img src="./assets/SnapSync.svg" alt="none" style="width : 100%">
 <br><br>
 
 # SnapSync : Python Simple Forum
