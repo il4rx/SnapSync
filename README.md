@@ -40,8 +40,6 @@ Check out SnapSync, a Python forum project. You can easily  download and set up 
    - Or you can type `--start` when you in `enterance.py`
 
 ## Follow Me on Instagram!
-Hello there! 🌟 If you enjoy captivating stories, vibrant snapshots, and a peek into my world, I invite you to follow me on Instagram! 📸✨
-
 **Why Follow?** <br>
 Explore a tapestry of moments, from travel escapades to behind-the-scenes glimpses of my creative pursuits. Immerse yourself in a visual diary that reflects the beauty of everyday life and the excitement of new discoveries.
 
