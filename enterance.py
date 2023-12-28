@@ -64,32 +64,31 @@ class Main:
                     OAuth2.truncate()
 
                 print("Your Account Successfully Created!")
-                time.sleep(3)
+                time.sleep(1)
             else :
                 print('The username is already used by someone else!')
                 time.sleep(5)
                 
         except ValueError:
+            print("Error Ocurred!")
             time.sleep(2)
 
     @staticmethod
     def start_program():
         try:
             print("Starting Program....")
-            time.sleep(1)
             os.system("cls||clear")
             subprocess.Popen(["python", "main.py"])
             sys.exit(0)
         except KeyboardInterrupt:
             print("Error!")
+            time.sleep(1)
 
     @staticmethod
     def body():
         while True:
             print(Figlet.header())
-            time.sleep(1)
             print(Figlet.description())
-            time.sleep(1)
             print(f"{Fore.CYAN}[+]{Style.RESET_ALL} Please Input Any Commands")
             command = input(">>> ")
             if command == "--create":
@@ -126,7 +125,6 @@ class Authenticated() :
         
         if command_prompt == "--logout" :
                 print('Try to logout...')
-                time.sleep(1)
                 with open("./Auth/Auth.json", "r+") as Jsons:
                     AuthDat = json.load(Jsons)
                     AuthDat = {}
@@ -137,7 +135,7 @@ class Authenticated() :
                 Lexer()
         else : 
             print("Invalid argument!")
-        time.sleep(2)
+            time.sleep(1)
 
 if __name__ == "__main__":
     with open("./Auth/Auth.json", "r") as JsonFile:
@@ -147,5 +145,4 @@ if __name__ == "__main__":
         else:
             os.system("cls||clear")
             Authenticated()
-            time.sleep(1)
 

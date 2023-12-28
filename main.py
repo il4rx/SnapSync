@@ -1,11 +1,12 @@
 import os
-import time, datetime
+import datetime
 import mysql.connector
 import pyfiglet
 from pyfiglet import figlet_format
 import colorama
 from colorama import Fore, Back, Style
 import bcrypt
+import time
 import random
 import subprocess
 import sys
@@ -23,7 +24,6 @@ _cursor = _connector.cursor()
 class Fallback:
     def __init__(self) -> None:
         print("Fallback In Process....")
-        time.sleep(1)
         os.system("cls||clear")
         subprocess.Popen(["python", "enterance.py"])
         sys.exit(0)
@@ -49,7 +49,6 @@ login using --login!
               """
         )
 
-        time.sleep(1)
         userInput = input(">>> ")
 
         if userInput == "--fallback":
@@ -58,7 +57,6 @@ login using --login!
             userTaskInput = input("Username : >>> ")
             try:
                 print("Finding username....")
-                time.sleep(3)
                 sql = "SELECT * FROM users WHERE username = %s"
 
                 _cursor.execute(sql, (userTaskInput,))
@@ -66,7 +64,6 @@ login using --login!
 
                 if len(_result) < 1:
                     print("Username not found!")
-                    time.sleep(1)
                     os.system("cls||clear")
                     subprocess.Popen(["python", "enterance.py"])
                     sys.exit(0)
@@ -89,17 +86,16 @@ login using --login!
                                 OAuth2.seek(0)
                                 json.dump(_AuthData, OAuth2)
                                 OAuth2.truncate()
-                            time.sleep(1)
                             
                             Lexer()
                         else:
                             print("Password Wrong!")
-                            time.sleep(1)
                             os.system("cls||clear")  # Improved cross-platform clear
                             subprocess.Popen(["python", "enterance.py"])
                             sys.exit(0)
             except ValueError:
                 print("Error, Value is Missing!")
+                time.sleep(4)
 
 
 class Authenticated:
@@ -143,7 +139,6 @@ class Authenticated:
                 Lexer()
             elif command_prompt == "--logout" :
                 print('Try to logout...')
-                time.sleep(1)
                 with open("./Auth/Auth.json", "r+") as Jsons:
                     AuthDat = json.load(Jsons)
                     AuthDat = {}
@@ -181,4 +176,3 @@ with open("./Auth/Auth.json", "r") as JsonFile:
     else:
         os.system("cls||clear")
         Authenticated()
-        time.sleep(1)
