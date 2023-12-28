@@ -25,7 +25,6 @@ Check out SnapSync, a Python forum project. You can easily  download and set up 
    - Locate the database file provided in the `Database` folder (e.g., `snap_sync.sql`).
    - Use a database management tool like phpMyAdmin or another SQL handler to import the database:
      - Open your database management tool.
-     - Create a new database (if not already created) and select it.
      - Import the database from the `.sql` document in the `Database` folder.
 
 4. **Create Your Account:**
