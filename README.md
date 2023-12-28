@@ -45,7 +45,4 @@ Hello there! 🌟 If you enjoy captivating stories, vibrant snapshots, and a pee
 **Why Follow?** <br>
 Explore a tapestry of moments, from travel escapades to behind-the-scenes glimpses of my creative pursuits. Immerse yourself in a visual diary that reflects the beauty of everyday life and the excitement of new discoveries.
 
-**How to Connect:** <br>
-Simply click the button below and embark on a visual journey with me! 🚀✨
-
-[![Follow on Instagram](https://img.shields.io/badge/Instagram-ffffff?style=flat-square&logo=instagram&labelColor=555&logoColor=fff&color=444)](https://instagram.com/xys.albert)
+<a href="https://instagram.com/xys.albert"><img src="https://img.shields.io/badge/Instagram-ffffff?style=flat-square&logo=instagram&labelColor=555&logoColor=fff&color=333" style="width : 15%;"></a>
