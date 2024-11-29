@@ -10,7 +10,7 @@ Check out SnapSync, a Python forum project. You can easily  download and set up 
 <br>
 # Installation
 1. **Download the Code:**
-   - Visit the [SnapSync GitHub repository](https://github.com/il4rx/SnapSync.git).
+   - Visit the [SnapSync GitHub repository](https://github.com/LemonGardener/SnapSync.git).
    - Click on the "Code" button and select "Download ZIP."
 
 2. **Install Requirements:**
