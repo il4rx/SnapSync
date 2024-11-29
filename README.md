@@ -38,11 +38,3 @@ Check out SnapSync, a Python forum project. You can easily  download and set up 
      python main.py
      ```
    - Or you can type `--start` when you in `enterance.py`
-
-## Follow Me on Instagram!
-**Why Follow?** <br>
-
-Explore a tapestry of moments, from travel escapades to behind-the-scenes glimpses of my creative pursuits. <br>
-Immerse yourself in a visual diary that reflects the beauty of programmer life and the excitement of new discoveries.
-
-<a href="https://instagram.com/xys.albert"><img src="https://img.shields.io/badge/Instagram-ffffff?style=flat-square&logo=instagram&labelColor=555&logoColor=fff&color=333"></a>
